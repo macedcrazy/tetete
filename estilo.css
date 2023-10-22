@@ -1,0 +1,187 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Arial;  
+  background: #cc9393;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #04AA6D;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 600px) {
+li {float: none;}
+}
+
+.hero {
+  display: grid;
+  width: 100%;
+  max-width: 1272px;
+  margin: 70px auto;
+  padding: 0 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+
+.hero-left {
+  display: block;
+  grid-column: 1;
+}
+
+.hero-right {
+  display: block;
+  height: auto;
+  margin: 0;
+  padding: 0 1rem;
+  grid-column: 2;
+}
+
+.hero__h1 {
+  font-size: 4rem;
+  line-height: 4.625rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.hero__h1--color {
+  color: whitesmoke;
+}
+
+.hero__underline-img {
+  margin: 16px 0 24px 0;
+  opacity: 9;
+}
+
+.hero__text {
+  max-width: 516px;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.hero__dog-img {
+  border-radius: 4px;
+}
+
+.hero__btn {
+  width: 500px;
+  height: 50px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 24px 3px;
+  border-radius:15px;
+  border: none;
+  transition: all 0.5s;
+  cursor: pointer;
+  color:whitesmoke;
+  background-color: #04AA6D;
+  box-shadow: 0px 12px 16px 0px rgb(53, 55, 53);
+}
+
+.hero__btn:hover {
+  opacity: 8;
+  background-color: lightgreen;
+}
+
+.hero__btn-paw {
+  display: block;
+  width: 26px;
+  height: auto;
+  margin-left: 1rem;
+  color: var(--dark-green);
+}
+
+/*media query da hero*/
+@media screen and (max-width: 850px) {
+  .hero {
+    display: grid;
+    margin: 40px auto;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left {
+    grid-column: 1;
+  }
+
+  .hero-right {
+    order: -1;
+    grid-column: 1;
+    padding: 0;
+  }
+
+  .hero__dog-img {
+    margin: 0 auto 1rem auto;
+    width: 50%;  
+   
+  }
+
+  .hero__h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 3rem;
+  }
+
+  
+  .hero__text {
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .hero__btn{
+    font-size: 20px;
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+
